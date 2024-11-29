@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>royalcuisine-menu</title>
+    <link rel="shortcut icon" href="images/r.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="navbar-logo">
+            <h1>Royal Cuisine</h1>
+        </div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <nav class="navbar-links">
+            <ul id="nav-links">
+                <li><a href="#footer">About</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <div class="navbar-cart">
+                <button id="cart-count">
+                    <button onclick="toggleCart()">View Cart</button>
+                </button>
+            </div>
+        </nav>
+        
+        <button class="hamburger" id="hamburger-menu">
+            &#9776; <!-- Hamburger Icon -->
+        </button>
+    </header>
+    
+
+    <!-- Menu Categories -->
+    <div class="menu">
+        <div class="category" id="appetizers">
+            <h2>Appetizers</h2>
+            <!-- Dish 1 -->
+            <div class="dish">
+                <img src="images/samosa.jpg" alt="Samosa">
+                <span class="item-count-badge" id="count-samosa">0</span>
+                <div class="dish-info">
+                    <h3>Samosa</h3>
+                    <p>Crunchy pastry filled with spiced potatoes.</p>
+                    <p class="price">₹50</p>
+                    <button onclick="incrementItemCount(event); addToCart('Samosa', 80)" data-item="samosa" data-price="50">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Dish 2 -->
+            <div class="dish">
+                <img src="images/pakora.jpg" alt="Pakora">
+                <span class="item-count-badge" id="count-pakora">0</span>
+                <div class="dish-info">
+                    <h3>Pakora</h3>
+                    <p>Crispy fritters made with chickpea flour and vegetables.</p>
+                    <p class="price">₹80</p>
+                    <button onclick="incrementItemCount(event); addToCart('pakora', 80)" data-item="pakora" data-price="80">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Add 8 more dishes here -->
+            <div class="dish">
+                <img src="images/chat.jpg" alt="chat">
+                <span class="item-count-badge" id="count-chat">0</span>
+                <div class="dish-info">
+                    <h3>Chat</h3>
+                    <p>Chaat is a savory snack that originated in India and is popular in South Asia.</p>
+                    <p class="price">₹60</p>
+                    <button onclick="incrementItemCount(event); addToCart('chat', 60)" data-item="chat" data-price="60">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="images/paneer.jpg" alt="paneer">
+                <span class="item-count-badge" id="count-paneer">0</span>
+                <div class="dish-info">
+                    <h3>Tandoori paneer</h3>
+                    <p>chunks of paneer are marinated in spiced yogurt and grilled in a Tandoor.</p>
+                    <p class="price">₹60</p>
+                    <button onclick="incrementItemCount(event); addToCart('paneer', 60)" data-item="paneer" data-price="60">Add to Cart</button>
+                    </div>   
+            </div>
+            <div class="dish">
+                <img src="images/dhokla.jpeg" alt="dhokla">
+                <span class="item-count-badge" id="count-dhokla">0</span>
+                <div class="dish-info">
+                    <h3>Khaman dhokla</h3>
+                    <p>a mixture of rice with the pulse Bengal gram, but has several variants with the gram replaced by chickpeas, pigeon peas, or urad beans.</p>
+                    <p class="price">₹80</p>
+                    <button onclick="incrementItemCount(event); addToCart('dhokla', 80)" data-item="dhokla" data-price="80">Add to Cart</button>
+                    </div>   
+            </div>
+
+        </div>
+
+        <div class="category" id="main-courses">
+            <h2>Main Courses</h2>
+            <!-- Dish 1 -->
+            <div class="dish">
+                <img src="images/biryani.jpg" alt="Biryani">
+                <span class="item-count-badge" id="count-biryani">0</span>
+                <div class="dish-info">
+                    <h3>Biryani</h3>
+                    <p>Aromatic rice cooked with spices and marinated meat.</p>
+                    <p class="price">₹250</p>
+                    <button onclick="incrementItemCount(event); addToCart('biryani', 250)" data-item="biryani" data-price="250">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Dish 2 -->
+            <div class="dish">
+                <img src="images/naan.jpg" alt="Naan">
+                <span class="item-count-badge" id="count-naan">0</span>
+                <div class="dish-info">
+                    <h3>Naan</h3>
+                    <p>Soft and fluffy flatbread, perfect with curries.</p>
+                    <p class="price">₹60</p>
+                    <button onclick="incrementItemCount(event); addToCart('naan', 60)" data-item="naan" data-price="60">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="images/lr.jpg" alt="lr">
+                <span class="item-count-badge" id="count-lemon-rice">0</span>
+                <div class="dish-info">
+                    <h3>Lemon rice</h3>
+                    <p>mixing precooked short grain rice with a tempering of mustard seeds, chana dal, green chilies, dried red chilies, fresh ginger and curry leaves.</p>
+                    <p class="price">₹200</p>
+                    <button onclick="incrementItemCount(event); addToCart('lemon-rice', 200)" data-item="lemon-rice" data-price="200">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="images/vb.jpeg" alt="lr">
+                <span class="item-count-badge" id="count-veg-dum-biryani">0</span>
+                <div class="dish-info">
+                    <h3>Veg Dum Biryani</h3>
+                    <p> cauliflower, onions, potatoes, carrots, french beans, bell pepper (capsicum), button mushrooms and green peas.</p>
+                    <p class="price">₹250</p>
+                    <button onclick="incrementItemCount(event); addToCart('veg-dum-biryani', 250)" data-item="veg-dum-biryani" data-price="250">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="images/cr.jpeg" alt="cr">
+                <span class="item-count-badge" id="count-curd-rice">0</span>
+                <div class="dish-info">
+                    <h3>Curd rice</h3>
+                    <p>  curd (yogurt), cooked rice, herbs and spices.</p>
+                    <p class="price">₹150</p>
+                    <button onclick="incrementItemCount(event); addToCart('curd-rice', 150)" data-item="curd-rice" data-price="150">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Add 8 more dishes here -->
+        </div>
+
+        <div class="category" id="desserts">
+            <h2>Desserts</h2>
+            <!-- Dish 1 -->
+            <div class="dish">
+                <img src="images/rasgulla.webp" alt="Rasgulla">
+                <span class="item-count-badge" id="count-rasgulla">0</span>
+                <div class="dish-info">
+                    <h3>Rasgulla</h3>
+                    <p>Soft and spongy sweet made from chhena soaked in syrup.</p>
+                    <p class="price">₹120</p>
+                    <button onclick="incrementItemCount(event); addToCart('rasgulla', 120)" data-item="rasgulla" data-price="120">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="images/gj.jpeg" alt="gj">
+                <span class="item-count-badge" id="count-gulab-jamun">0</span>
+                <div class="dish-info">
+                    <h3>Gulab jamun</h3>
+                    <p>Soft and spongy sweet made up of khoya, a pinch of all-purpose flour/refined wheat flour/ wheat flour (optional), baking powder and clarified butter (ghee); milk kneaded to form a dough, moulded into balls, deep fried and dropped into simmering sugar syrup.</p>
+                    <p class="price">₹150</p>
+                    <button onclick="incrementItemCount(event); addToCart('gulab-jamun', 150)" data-item="gulab-jamun" data-price="150">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="images/jl.jpeg" alt="jl">
+                <span class="item-count-badge" id="count-jalebi">0</span>
+                <div class="dish-info">
+                    <h3>Jalebi</h3>
+                    <p>a South Asian dessert that is made from deep-fried batter and soaked in sugar syrup.</p>
+                    <p class="price">₹150</p>
+                    <button onclick="incrementItemCount(event); addToCart('jalebi', 150)" data-item="jalebi" data-price="150">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Add 9 more dishes here -->
+        </div>
+
+        <div class="category" id="beverages">
+            <h2>Beverages</h2>
+            <!-- Dish 1 -->
+            <div class="dish">
+                <img src="images/masalachai.jpg" alt="Masala Chai">
+                <span class="item-count-badge" id="count-masala-chai">0</span>
+                <div class="dish-info">
+                    <h3>Masala Chai</h3>
+                    <p>Spiced Indian tea with ginger and cardamom.</p>
+                    <p class="price">₹40</p>
+                    <button onclick="incrementItemCount(event); addToCart('masala-chai', 40)" data-item="masala-chai" data-price="40">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Add 9 more dishes here -->
+            <div class="dish">
+                <img src="images/bm.jpeg" alt="bm">
+                <span class="item-count-badge" id="count-badam-milk">0</span>
+                <div class="dish-info">
+                    <h3>Badam milk</h3>
+                    <p> almonds (or almond flour), cardamoms, saffron, whole milk and sugar.</p>
+                    <p class="price">₹80</p>
+                    <button onclick="incrementItemCount(event); addToCart('badam-milk', 80)" data-item="badam-milk" data-price="80">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: ₹<span id="total-price">0</span></p>
+            <button onclick="closeCart()">Close</button>
+            <button onclick="placeOrder()">Place Order</button>
+        </div>
+    </div>
+   
+
+    <!-- Order Confirmation Modal -->
+    <div id="order-confirmation" class="order-confirmation">
+        <div class="order-content">
+            <h2>Order Confirmed</h2>
+            <p>Your Order ID: <span id="order-id">#123456</span></p>
+
+            <p>Phone Number: <strong id="confirmed-phone"></strong></p>
+            <p>Table Number: <strong id="confirmed-table"></strong></p>
+            <p>Thank you for your order!</p>
+            <button onclick="closeOrderConfirmation()">Close</button>
+        </div>
+    </div>
+    
+    <footer class="footer" id="footer">
+        <p>&copy; 2024 Royal Cuisine. All Rights Reserved.</p>
+        <p>Contact us: <a href="mailto:mohannaidu2004@gmail.com">mohannaidu2004@gmail.com</a> | <a href="mailto:support@royalcuisine.com">support@royalcuisine.com</a></p>
+    </footer>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>
